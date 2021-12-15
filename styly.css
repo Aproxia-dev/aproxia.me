@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&display=swap');
+@keyframes title {
+  0%    {opacity: 0;}
+  100%  {opacity: 1;}
+}
+
+@keyframes subtitle {
+  0%    {opacity: 0; font-size: 48px;}
+  100%  {opacity: 1; font-size: 64px;}
+}
+
+body {
+    background-color: #32302f;
+    color: #ebdbb2;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1.5em;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  padding-left: 60px;
+}
+
+#title-screen {
+  position: relative;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+}
+
+#title-screen p {
+    margin: 0;
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ts-biggest {
+    font-size: 188px;
+    animation-name: title;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+.ts-bigger {
+    font-size: 64px;
+    animation-name: subtitle;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+#navbar {
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: #504945;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #ebdbb2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+#navbar a:hover {
+  background-color: #d3869b;
+  color: #282828;
+}
+
+#navbar a.active {
+  background-color: #b16286;
+  color: #ebdbb2;
+}
+
+#navbar a.active:hover {
+  background-color: #d3869b;
+  color: #282828;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.content {
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+.sticky + .content {
+    padding-top: 56px;
+}

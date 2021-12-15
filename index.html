@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang='cs'>
+  <head>
+    <title>Apro's Site</title>
+    <meta charset='utf-8'>
+    <meta name='description' content='gejmim'>
+    <link rel="stylesheet" href="styly.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    .sticky + .content {
+        padding-top: 56px;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div id='title-screen'>
+        <p><span id='title'    class='ts-biggest'></span><br>
+           <span id='subtitle' class='ts-bigger' ></span>    </p>
+    </div>
+    <div id="navbar">
+        <a class="active" href="javascript:void(0)">Main Page</a>
+        <a href="javascript:void(0)">About Me</a>
+        <a href="javascript:void(0)">Blog</a>
+        <a href="javascript:void(0)">Portfolio</a>
+        <a href="javascript:void(0)">Contact</a>
+    </div>
+    <div class="content">
+      <h1>Hi! I'm Apro! o/</h1>
+      <h3 style="text-align:center;padding-left:0px;">And welcome to hell!</h3><br>
+      <p>I originally made this site for a school project, but because I had the need to flex on my teacher it's kinda grown more
+         into my own genuine personal website!</p>
+      <p>On this site, you'll be able to find:
+         <ul>
+             <li>Info about me as a person</li>
+             <li>My portfolio and a list of other things I've done and that I'm proud of</li>
+             <li>My Socials
+                 <ul>
+                     <li>YouTube</li>
+                     <li>Discord Tag</li>
+                     <li>GitHub</li>
+                     <li>Not much more for now</li>
+                 </ul>
+             <li>A ton of easter eggs that I made just for fun</li>
+             <li>Unfunny memes</li>
+             <li>And more!</li>
+      <h2>Enjoy your stay!</h2>
+    </div>
+    
+    
+    <script type="application/javascript">
+        window.onscroll = function() {stickyNavbar()};
+        window.onresize = function() {reInitVars()};
+        window.onload   = function() {reInitVars(); titleSeq()};
+        
+        var sticky;
+        var navbar = document.getElementById("navbar");
+        var subtitle = document.getElementById("subtitle");
+        var title = document.getElementById("title");
+
+        function titleSeq() {
+            const subtitles = [
+                "doin' ya mom",
+                "gameing",
+                "dies from cringe",
+                "brains r overrated",
+                "does anybody even read this?",
+                "i hate the british",
+                "my face when it langoš",
+                "what the dog doin'?",
+                "professional sussy baka",
+                "ah! so sorry!",
+                "eats hot chip & lies",
+                "eat, sleep, ponder my orb",
+                ":star2:",
+                "coconut dogy! o mai gosh!!",
+                "SOCKS ON THE CHAIR??!?!",
+                "https://youtu.be/dQw4w9WgXcQ",
+                "i'm going to be switzerland",
+                "why am i argentina",
+                "e",
+                // commented out for the sake of not traumatizing the teacher
+                /*
+                "femboy hooters employee",
+                "WTF!!! SEX??!?",
+                "average cumfartcore enjoyer",
+                */
+            ];
+            subtitleInt = Math.floor(Math.random() * subtitles.length);
+            subtitle.innerHTML = subtitles[subtitleInt];
+            title.innerHTML = "Apro";
+            
+        }
+        
+        function reInitVars() {
+            sticky = window.innerHeight;
+        }
+        
+        function stickyNavbar() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+           
+        }
+    </script>
+
+  </body>
+</html>
