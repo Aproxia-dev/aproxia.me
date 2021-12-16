@@ -35,6 +35,14 @@ h2 {
   padding-left: 60px;
 }
 
+th {
+  padding-bottom:8px;
+}
+
+td {
+  text-align: center;
+}
+
 #title-screen {
   position: relative;
   text-align: center;
