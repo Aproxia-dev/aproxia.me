@@ -7,14 +7,14 @@ md = markdown.Markdown()
 
 files = glob.glob("./md/*.md")
 for n in range(len(files)):
-    print(n+1 + ". " + files[n])
-file = int(input("What file do you want to convert? "))
+    print(str(n+1) + ". " + files[n])
+file = int(input("What file do you want to convert? "))-1
 
 title = input("What should the blog posts title be? ")
 
 post = open(files[file], "r")
 template = open("template", "r")
-html = template.read() + md.convert(post) + "</div></body></html>"
+html = template.read() + md.convert(post.read()) + "</div></body></html>"
 
 filetitle = title.lower().replace(" ","-")
 filetitle = re.sub("[^a-z\-]", "", filetitle)

@@ -115,6 +115,7 @@ tr:hover {
     width: 100vw;
     overflow: hidden;
     background-color: var(--navbar);
+    z-index: 2;
 }
 
 .navlocal {
@@ -223,6 +224,16 @@ tr:hover {
     padding-right: 20vw;
 }
 
+.sticky + .centered {
+    padding-top: 56px;
+}
+
 .sticky + .content {
     padding-top: 56px;
+}
+
+.centered {
+  position: relative;
+  height: calc(100vh-1.5em-28px);
+  width: 100%;
 }
