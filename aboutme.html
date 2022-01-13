@@ -10,18 +10,17 @@
   </head>
   <body>
 
-     <div id="navbar" class="flexbox sticky">
-       <span class="navlocal">
-         <a href="/">Main Page</a>
-         <a class="active" href="javascript:void(0)">About Me</a>
-         <a href="blog">Blog</a>
-       </span>
-       <span class="navsocial">
-         <a href="https://www.youtube.com/channel/UCk1zcHlOko3j4UcJh-0WWig"><i class="fab fa-youtube"></i></a>
-         <a href="https://github.com/Call-Me-Apro"><i class="fab fa-github"></i></a>
-         <a href="https://open.spotify.com/user/r4ilax"><i class="fab fa-spotify"></i></a>
-       </span>
-     </div>
+    <div id="navbar" class="sticky">
+      <a href="javascript:void(0);" class="icon" onclick="navExpand()"><i class="fa fa-bars"></i></a>
+      <a href="/">Main Page</a>
+      <a class="active" href="javascript:void(0);">About Me</a>
+      <a href="blog">Blog</a>
+      <span class="navsocial">
+        <a class="navsocial" href="https://www.youtube.com/channel/UCk1zcHlOko3j4UcJh-0WWig"><i class="fab fa-youtube"></i></a>
+        <a class="navsocial" href="https://github.com/Call-Me-Apro"><i class="fab fa-github"></i></a>
+        <a class="navsocial" href="https://open.spotify.com/user/r4ilax"><i class="fab fa-spotify"></i></a>
+      </span>
+    </div>
 
 
     <div class="content">
@@ -37,33 +36,88 @@
       <p>I also play games sometimes, namely <b>Geometry Dash</b> and <b>Minecraft</b>, as well as <b>Beat Saber</b>, <b>Celeste</b> and <b>Mario Kart 8 Deluxe.</b></p>
       
       <p>When it comes to programming, my system and my workflow, I use:</p>
-        <div class="flexbox">
-          <div style="padding-right:40px;">
-            <ul>
-              <li>OS:   
-              <li>WM:   
-              <li>IDE:   
-              <li>Browser:   
-              <li>Notes Taking:   
-              <li>DAW:   
-              <li>Image Editor:   
-              <li>Video Editor:   
-            </ul>
-          </div>
-          <div>
-            Arch Linux or Windows 10<br>
-            dwm<br>
-            vim or VSCodium<br>
-            Ungoogled Chromium or Mozilla Firefox<br>
-            Obsidian<br>
-            FL Studio 20<br>
-            paint.net or GIMP<br>
-            MAGIX Vegas Pro 16
+        <div class="flexbox clear">
+          <!-- div style="padding-right:40px;" -->
+            <table>
+              <tr>
+                <td>
+                  <ul><li>OS:</ul>
+                </td>
+                <td>
+                  Arch Linux or Windows 10
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <ul><li>WM:</ul>
+                </td>
+                <td>
+                  dwm
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <ul><li>IDE:</ul>
+                </td>
+                <td>
+                  vim or VSCode
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <ul><li>Browser:</ul>
+                </td>
+                <td>
+                  Mozilla Firefox
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <ul><li>Notes Taking:</ul>
+                </td>
+                <td>
+                  Obsidian
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <ul><li>DAW:</ul>
+                </td>
+                <td>
+                  FL Studio 20
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <ul><li>Image Editor:</ul>
+                </td>
+                <td>
+                  GIMP (or paint.net)
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <ul><li>Video Editor</ul>
+                </td>
+                <td>
+                  MAGIX Vegas Pro 16
+                </td>
+              </tr>
+            </table>
           </div>
         </div>
-    </div>
-    <br>
     
-    
+    <script type="application/javascript">
+      var navbar = document.getElementById("navbar");
+
+      function navExpand() {
+        if (navbar.classList.contains("dropped")) {
+          navbar.classList.remove("dropped")
+        } else {
+          navbar.classList.add("dropped");
+        }
+      }
+    </script>
+      
   </body>
 </html>

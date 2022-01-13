@@ -10,18 +10,30 @@
   </head>
   <body>
 
-     <div id="navbar" class="flexbox sticky">
-       <span class="navlocal">
-         <a href="../index.html">Main Page</a>
-         <a href="../aboutme.html">About Me</a>
-         <a class="active" href="../blog.html">Blog</a>
-       </span>
-       <span class="navsocial">
-         <a href="https://www.youtube.com/channel/UCk1zcHlOko3j4UcJh-0WWig"><i class="fab fa-youtube"></i></a>
-         <a href="https://github.com/Call-Me-Apro"><i class="fab fa-github"></i></a>
-         <a href="https://open.spotify.com/user/r4ilax"><i class="fab fa-spotify"></i></a>
-       </span>
-     </div>
+    <script type="application/javascript">
+      window.onload = function() {
+        var navbar = document.getElementById("navbar");
+      }
 
+      function navExpand() {
+        if (navbar.classList.contains("dropped")) {
+          navbar.classList.remove("dropped")
+        } else {
+          navbar.classList.add("dropped");
+        }
+      }
+    </script>
+
+    <div id="navbar" class="sticky">
+      <a href="javascript:void(0);" class="icon" onclick="navExpand()"><i class="fa fa-bars"></i></a>
+      <a href="/">Main Page</a>
+      <a href="aboutme">About Me</a>
+      <a class="active" href="blog">Blog</a>
+      <span class="navsocial">
+        <a class="navsocial" href="https://www.youtube.com/channel/UCk1zcHlOko3j4UcJh-0WWig"><i class="fab fa-youtube"></i></a>
+        <a class="navsocial" href="https://github.com/Call-Me-Apro"><i class="fab fa-github"></i></a>
+        <a class="navsocial" href="https://open.spotify.com/user/r4ilax"><i class="fab fa-spotify"></i></a>
+      </span>
+    </div>
 
     <div class="content">
