@@ -21,6 +21,15 @@
   100%  {opacity: 1; font-size: 4rem;}
 }
 
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
 /* Base Elements*/
 
 body {
@@ -262,8 +271,11 @@ tr:hover {
 }
 
 .centered {
-  position: relative;
-  width: 100%;
+  text-align: center;
+}
+
+.rotate {
+  animation: rotation 4s infinite linear;
 }
 
 @media only screen and (max-width:1280px) {
