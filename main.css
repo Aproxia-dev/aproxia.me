@@ -319,6 +319,7 @@ tr:hover {
   #navbar.dropped a.navsocial {
     display: inline-block;
     float: right;
+  }
 }
  
 @media only screen and (max-width:720px) {
@@ -335,5 +336,8 @@ tr:hover {
   }
   .nomobile {
     display: none;
+  }
+  .date {
+    font-size: 1rem;
   }
 }
