@@ -27,8 +27,8 @@
     <div id="navbar" class="sticky">
       <a href="javascript:void(0);" class="icon" onclick="navExpand()"><i class="fa fa-bars"></i></a>
       <a href="/">Main Page</a>
-      <a href="aboutme">About Me</a>
-      <a class="active" href="blog">Blog</a>
+      <a href="../aboutme">About Me</a>
+      <a class="active" href="../blog">Blog</a>
       <span class="navsocial">
         <a class="navsocial" href="https://www.youtube.com/channel/UCk1zcHlOko3j4UcJh-0WWig"><i class="fab fa-youtube"></i></a>
         <a class="navsocial" href="https://github.com/Call-Me-Apro"><i class="fab fa-github"></i></a>
