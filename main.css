@@ -9,6 +9,7 @@
   --navhover:   #fabd2f;
   --tablehover: #1d2021;
   --link:       #83a598;
+  --linkhover:  #458588;
 }
 
 @keyframes title {
@@ -58,7 +59,13 @@ h3 {
 
 a {
   color: var(--link);
-  text-decoration: none;
+  text-decoration: underline;
+  font-style: normal;
+}
+
+a:hover {
+  color: var(--linkhover);
+  font-style: italic;
 }
 
 /*  Tables */
