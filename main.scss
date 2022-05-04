@@ -1,0 +1,128 @@
+@import url('fonts/iosevka.css');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+$bg:            #1E1E2E;
+$fg:            #D9E0EE;
+$black:         #161320;
+$red:           #F28FAD;
+$green:         #ABE9B3;
+$yellow:        #FAE3B0;
+$blue:          #96CDFB;
+$magenta:       #F5C2E7;
+$cyan:          #89DCEB;
+$white:         #D9E0EE;
+
+$accent:        $magenta;
+$accent-alt:    #C9CBFF;
+$gray:          #6E6C7E;
+
+@keyframes fade-in {
+    0%      {opacity: 0;}
+    100%    {opacity: 1;}
+}
+
+@keyframes fade-in-later {
+    0%      {opacity: 0;}
+    50%     {opacity: 0;}
+    100%    {opacity: 1;}
+}
+
+:root {
+    all:                unset;
+}
+
+body {
+    font-family:            'Iosevka';
+    background-color:       $bg;
+    color:                  $fg;
+    overflow-x:             hidden;
+    overflow-y:             visible;
+    margin:                 0px;
+}
+
+/*   Titlepage   */
+
+.titlepage {
+    height:           101vh;
+    width:            100vw;
+    background-image: url("img/pexels-lisa-fotios-1083822.jpg");
+    filter:           blur(1vh);
+    position:         absolute;
+    top:              0px;
+}
+
+.title {
+    font-size: 7rem;
+    animation-name: fade-in;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+}
+
+.subtitle {
+    font-size: 4rem;
+    animation-name: fade-in-later;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-out;
+}
+
+.centerflex {
+    width:                  100vw;
+    height:                 100vh;
+    display:                flex;
+    flex-direction:         column;
+    justify-content:        center;
+    align-items:            center;
+    text-align:             center;
+    
+    p {
+        z-index: 1;
+    }
+}
+
+/*   Content   */
+
+.content {
+    margin-top:     10vh;
+    margin-left:    20%;
+    margin-right:   20%;
+    margin-bottom:  5vh;
+
+    h1 {
+        margin-left:    2rem;
+        font-size:      3rem;
+        color:          $accent;
+    }
+
+    h2 {
+        margin-left:    2rem;
+        font-size:      2rem;
+        color:          $accent-alt;
+    }
+
+    p {
+        font-size:      1.2rem;
+    }
+    
+    li {
+        list-style: none;
+    }
+
+    li::before {
+        content: "> ";
+        color:   $gray;
+    }
+}
+
+/*   Global   */
+
+.accent {
+    color:                  $accent;
+}
+
+.accent-alt {
+    color:                  $accent-alt;
+}
+
+.handwriting {
+    font-family:            'Pacifico';
+}
